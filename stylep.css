@@ -1,0 +1,105 @@
+body{
+  background: url('imgp/fundo2.jpg');
+  background-size: cover;
+  font-family: 'Comic Sans MS', sans-serif;
+  background-repeat: no-repeat;
+  background-position: center;
+}
+
+.textos{
+  width: 80%;
+  margin: 0 auto;
+  font-family: 'Philosopher', sans-serif;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+}
+
+.textos h1{
+  font-family: 'Philosopher', sans-serif;
+  font-size: 32px;
+}
+
+.textos p{
+  font-size: 22px
+}
+
+.cadastro{
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 80%;
+  margin: 0 auto;
+}
+
+form{
+  font-family: 'Philosopher', sans-serif;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  width: 100%;
+}
+
+form h2{
+  font-size: 28px;
+}
+
+.inputs{
+  flex-direction: column; 
+  font-size: 20px;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  width: 200%;
+  margin: 8px;
+}
+
+.inputs input{
+  width: 40%;
+  height: 30px;
+  border-radius: 5px;
+  border: none;
+  box-shadow: 0 0 5px rgba(0, 0, 0, 0.5);
+  padding: 10px;
+  text-align: center;
+  outline: none;
+  box-sizing: border-box;
+  font-size: 80%;
+  transition: 0.5s;
+}
+
+.inputs input:hover{
+  box-shadow: 0 0 20px rgba(0, 0, 0, 0.5);
+}
+
+.inputs input:focus{
+  box-shadow: 0 0 20px rgba(0, 0, 0, 0.5);
+}
+
+button{
+  position: static; 
+  width: 25%;
+  margin: 50px 0;
+  width: 150px;
+  height: 80px;
+  font-size: 16px;
+  border-radius: 5px;
+  border: none;
+  background-color: #D0F8ED;
+  transition: 1s;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.5);
+  text-transform: uppercase;
+  font-weight: bold;
+  box-sizing: border-box;
+}
+
+button:hover{
+  width: 50%;
+  background-color: #D0F8ED;
+  box-shadow: 0 0 20px rgba(0, 0, 0, 0.5);
+}
+
+
+

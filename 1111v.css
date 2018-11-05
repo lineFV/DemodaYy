@@ -1,0 +1,103 @@
+@media screen and (min-width: 1111px){
+    body{
+        background: url('imgv/fundo2.jpg');
+        background-size: cover;
+        font-family: 'Comic Sans MS', sans-serif;
+        background-repeat: no-repeat;
+        background-position: center;
+      }
+      .textos{
+        width: 80%;
+        margin: 0 auto;
+        font-family: 'Philosopher', sans-serif;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        flex-direction: column;
+      }
+    
+      .textos h1{
+        font-family: 'Philosopher', sans-serif;
+        font-size: 32px;
+      }
+    
+      .textos p{
+        font-size: 22px
+      }
+    
+      .cadastro{
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        width: 80%;
+        margin: 0 auto;
+      }  
+    
+      form{
+        font-family: 'Philosopher', sans-serif;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+        width: 100%;
+      }
+    
+      form h2{
+        font-size: 28px;
+      }
+    
+      
+    .inputs{
+        flex-direction: center;
+        font-size: 20px;
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+        width:50%;
+        margin: 8px;
+      }
+    
+      .inputs input{
+        flex-direction: column;
+        width: 800px;
+        border-radius: 5px;
+        border: none;
+        box-shadow: 0 0 5px rgba(0, 0, 0, 0.5);
+        padding: 10px;
+        text-align: center;
+        outline: none;
+        box-sizing: border-box;
+        font-size: 80%;
+        transition: 0.5s;
+      }
+    
+      .inputs input:hover{
+        box-shadow: 0 0 20px rgba(0, 0, 0, 0.5);
+      }
+    
+      .inputs input:focus{
+        box-shadow: 0 0 20px rgba(0, 0, 0, 0.5);
+      }
+    
+      button{
+        width: 150px; 
+        margin: 50px 0;
+        height: 80px;
+        font-size: 16px;
+        border-radius: 5px;
+        border: none;
+        background-color: #D0F8ED;
+        transition: 1s;
+        box-shadow: 0 0 10px rgba(0, 0, 0, 0.5);
+        text-transform: uppercase;
+        font-weight: bold;
+        box-sizing: border-box;
+      }
+    
+      
+      button:hover{
+        width: 12000%;
+        background-color: #D0F8ED;
+        box-shadow: 0 0 20px rgba(0, 0, 0, 0.5);
+      }
+}
