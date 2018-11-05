@@ -132,7 +132,7 @@ height: 65vh;
 opacity: 0.8;
 position: relative;
 top:0;
-z-index: 2;
+z-index: 1;
 overflow: hidden;
 }
 .parallax2 {
