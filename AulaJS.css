@@ -58,7 +58,7 @@ body{
 header{
     height: 70px;
     width: 100%;
-    background-color:#96b8d7;
+    background-color:#a5d0f0;
     display: flex;
     justify-content: space-between;
     align-items: center;
@@ -70,7 +70,7 @@ header{
 header>a{
     margin-left: 3vw;
     text-decoration: none;
-    font-size: 25px;
+    font-size: 2em;
     color: #000;
     font-family: sans-serif;
     font-weight: bold;
@@ -86,7 +86,6 @@ nav{
     margin-right: 3vw;
     position: relative;
     z-index: 2;
-    background-color: #a5d0f0;
 }
 
 a{
@@ -94,14 +93,15 @@ a{
     color: #000;
 }
 
-nav>a{
+nav>a {
     text-decoration: none;
     color: #000;
-    font-weight: 600;
+    font-weight: 550;
     font-family: sans-serif;
-    font-size: 14pt;
-    height: 70px;
-    width: calc(100% / 6);
+    font-size: 1em;
+    height: 7vh;
+    margin: 10px;
+    width: calc(100vw / 6);
     border-radius: 5px;
     align-items: center;
     display: flex;
@@ -109,7 +109,10 @@ nav>a{
     box-sizing: border-box;
     transition: 1s;
     z-index: 2;
-    background-color:#96b8d7
+}
+header img{
+    width: 7vw;
+    margin-left: 3vw;
 }
 .texto {
     width: 73vw;
@@ -292,7 +295,7 @@ input{
 .divCad{
     height: 70px;
     width: 17.2%;
-    background-color:  #41FFD8;
+    background: linear-gradient(0.05turn, #a9817f, #a5d0f0, #a5d0f0);
     display: flex;
     align-items: center;
     justify-content: space-evenly;
@@ -313,7 +316,6 @@ input{
     text-align: center;
     text-decoration: none;
     font-weight: bold;
-    background-color: white;
     border-radius: 5px;
     height: calc(92% / 3);
     width: 95%;

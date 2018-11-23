@@ -1,93 +1,174 @@
 ﻿<!DOCTYPE html>
 
 <html lang="en" xmlns="http://www.w3.org/1999/xhtml">
+
 <head>
     <meta charset="utf-8" />
     <title>Flip Card</title>
-
+    <link href="https://fonts.googleapis.com/css?family=Krub" rel="stylesheet">
+    <script defer src="AulaJS.js"></script>
+    <link rel="stylesheet" href="head.css">
     <style>
-
         body {
             margin: 0 auto;
-            display: block;
+            background-color: white;
             margin: 0;
-            width:100%;
-            height:100%;       
+            width: 100vw;
+            height: 100vh;
+            overflow-x: hidden;
+            font-family: 'Krub', sans-serif;
+        }
+        
+        footer {
+            display: flex;
+            margin: 0 auto;
+            background-color: rgba(0, 0, 0, 0.582);
+            height: 100vh;
         }
 
+        footer img {
+            height: 50px;
+            width: 50px;
+        }
 
         header {
-            height: 100px;
-            margin: 0;
-            background-color: #8904B1;
+            height: 70px;
+            width: 100%;
+            background-color: #a5d0f0;
             display: flex;
+            justify-content: space-between;
+            align-items: center;
+            box-shadow: 0 0 10px;
+            flex-direction: row;
+            z-index: 2;
         }
 
+        header>a {
+            margin-left: 3vw;
+            text-decoration: none;
+            font-size: 2em;
+            color: #000;
+            font-family: sans-serif;
+            font-weight: bold;
+            z-index: 2;
+        }
+
+        nav {
+            width: 70%;
+            height: 70px;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            margin-right: 3vw;
+            position: relative;
+            z-index: 2;
+        }
+
+        a {
+            text-decoration: none;
+            color: #000;
+        }
+
+        nav>a {
+            text-decoration: none;
+            color: #000;
+            font-weight: 550;
+            font-family: sans-serif;
+            font-size: 1em;
+            height: 7vh;
+            margin: 10px;
+            width: calc(100vw / 6);
+            border-radius: 5px;
+            align-items: center;
+            display: flex;
+            justify-content: center;
+            box-sizing: border-box;
+            transition: 1s;
+            z-index: 2;
+        }
+
+        .texto {
+            width: 73vw;
+            position: relative;
+            color: black;
+        }
+
+        .d1:hover {
+            background-color: rgba(255, 255, 255, 0.4);
+            letter-spacing: 2px;
+        }
 
         img {
             width: 50px;
             height: 50px;
-            border-radius: 20px;
             width: 100%;
             height: 100%;
         }
-        
+
 
         /* AQUI MOVEMOS O TÍTULO */
 
         .titulo {
             display: flex;
-            height: 50px;
-            margin: 20px 0 60px 70px;
+            height: 5vh;
+            margin: 0 0 16vh 27vw;
         }
 
 
-        h2{
-            font-family: Century sans-serif;
+        h2 {
             font-size: 25pt;
         }
 
         /*-----------------------*/
 
-        
-
         /*-------------------------------*/
+
         /* REFERENTE A POSIÇÃO DOS CARDS (como se fosse o body)*/
-        .corpo{
-            display:flex;
-            position: relative;
-            width: 1200px;
-            height: 300px;
-            justify-content:center;
-            align-items:center;
-        }
-        /*-------------------------------*/
 
+        .corpo {
+            flex-direction: row;
+            flex-wrap: wrap;
+            display: flex;
+            position: relative;
+            width: 100vw;
+            height: 100%;
+            justify-content: center;
+            align-items: center;
+        }
+
+        /*-------------------------------*/
 
         /*-------------------*/
+
         /* TAMANHO DOS CARDS*/
+
         .conteudo {
             position: relative;
-            width: 180px;
-            height: 240px;
-            margin-left:100px;  
+            width: 280px;
+            height: 42vh;
+            margin-left: 3vw;
+            margin-top: 5vh;
         }
-        /*-------------------*/
-
 
         /*-------------------*/
-        /* ROTAÇÃO DE CARDS */       
+
+        /*-------------------*/
+
+        /* ROTAÇÃO DE CARDS */
+
         .cartao {
             /* PARTE ESSENCIAL DO CÓDIGO */
             position: absolute;
             width: 100%;
             height: 100%;
+            display: flex;
             transform-style: preserve-3d;
             transition: all 0.3s linear;
         }
 
         /* PARTE ESSENCIAL DO CÓDIGO */
-        .cartao:hover{
+
+        .cartao:hover {
             transform: rotateY(180deg);
         }
 
@@ -98,10 +179,8 @@
             width: 100%;
             height: 100%;
             backface-visibility: hidden;
-            background: #D358F7;
             color: #333;
             /*firulas*/
-            border-radius: 20px;
             text-align: center;
         }
 
@@ -112,236 +191,518 @@
             width: 100%;
             height: 100%;
             backface-visibility: hidden;
-            background: #E2A9F3;
             color: #333;
             transform: rotateY(180deg);
             /*firulas*/
-            border-radius: 20px;
             text-align: center;
         }
+
         /*-------------------*/
 
-        /*-----------------------------------------------------------------------------------------*/    
-     
+        /*-----------------------------------------------------------------------------------------*/
 
+        .rosa {
+            position: relative;
+            display: flex;
+            justify-content: center;
+            background: rgba(255, 255, 255);
+            font-size: 3em;
+        }
+
+        .azul {
+            background: rgba(255, 255, 255);
+            display: flex;
+            justify-content: center;
+            font-size: 3em;
+        }
+
+        img {
+            position: absolute;
+            z-index: -1;
+        }
+
+        .texto {
+            position: relative;
+            top: 0;
+            width: 85vw;
+            height: 70%;
+            margin: 5vh;
+            display: flow-root;
+        }
+
+        .contatos {
+            top: 0vh;
+            color: #000;
+            left: 10px;
+            z-index: 0;
+            position: relative;
+            font-weight: 100;
+        }
+
+        .parallax {
+            background-image: url("img/psico1.jpg");
+            background-attachment: fixed;
+            background-position: center top;
+            background-size: cover;
+            background-repeat: no-repeat;
+            height: 95vh;
+            position: relative;
+            top: 0;
+            z-index: 1;
+            overflow: hidden;
+        }
+
+        .parallax2 {
+            background-image: url("img/eu/criancas2.png");
+            background-attachment: fixed;
+            background-position: center top;
+            background-size: cover;
+            background-repeat: no-repeat;
+            padding-bottom: 10vh;
+            position: relative;
+            top: 0;
+            z-index: 2;
+            overflow: hidden;
+        }
+
+        .parallax3 {
+            background-image: url("img/paisclaras/Cute2.jpg");
+            background-attachment: fixed;
+            background-position: center top;
+            background-size: cover;
+            background-repeat: no-repeat;
+            position: relative;
+            padding-bottom: 10vh;
+            top: 0;
+            z-index: 2;
+            overflow: hidden;
+        }
+
+        .quadradinhos {
+            position: relative;
+            top: 0vh;
+            background: rgba(255, 255, 255, 0.6);
+        }
+
+        .rotate {
+            left: -23vw;
+            background: linear-gradient(0.55turn, #a9817f,#a5d0f0,#a5d0f0);
+            width: 132vw;
+            height: 42vh;
+            position: relative;
+            top: -15vh;
+            animation: 2s rotate linear;
+            transform: rotate(169deg);
+        }
+
+        .colab {
+            background-image: url(img/high-five2.png);
+            background-size: cover;
+            background-repeat: no-repeat;
+            width: 20vw;
+            height: 20vw;
+            position: relative;
+            top: 0;
+            left: 30vw;
+            animation: 5s colab linear;
+        }
+
+        @keyframes colab {
+            0% {
+                background-image: url(img/high-five.png);
+            }
+            50% {
+                background-image: url(img/high-five1.png);
+            }
+            100% {
+                background-image: url(img/high-five2.png);
+            }
+        }
+
+        @keyframes rotate {
+            0% {
+                background: linear-gradient(0.505turn, #a9817f, #a5d0f0,#a5d0f0);
+                transform: rotate(180deg);
+                top: -15vh;
+                height: 105vh;
+            }
+            20% {
+                background: linear-gradient(0.51turn, #a9817f,#a5d0f0,#a5d0f0);
+            }
+            40% {
+                background: linear-gradient(0.52turn, #a9817f,#a5d0f0,#a5d0f0);
+            }
+            60% {
+                background: linear-gradient(0.53turn, #a9817f,#a5d0f0,#a5d0f0);
+            }
+            80% {
+                background: linear-gradient(0.54turn, #a9817f,#a5d0f0,#a5d0f0);
+            }
+            100% {
+                transform: rotate(169deg);
+                background: linear-gradient(0.55turn, #a9817f,#a5d0f0,#a5d0f0);
+                top: -16vh;
+            }
+
+        }
+
+        @media (min-width:600px) {
+            .conteudo {
+                width: 250px;
+                height: 37vh;
+            }
+            .colab {
+                width: 15vw;
+                height: 15vw;
+            }
+
+        }
+
+        @media (min-width:800px) {
+            .conteudo {
+                width: 173px;
+                height: 27vh;
+            }
+            .colab {
+                width: 7vw;
+                height: 7vw;
+            }
+        }
+
+        @media (min-width:1px) {
+            .conteudo {
+                width: 232px;
+                height: 35vh;
+            }
+        }
     </style>
 
 </head>
+
 <body>
-    <header></header>
+    <header>
+            <img src="img/2.png" href="">
+        <nav>
+            <a class="a1 d1" href="index.html">Home</a>
+            <a class="a2 d1" href="#">Cadastre-se</a>
+            <div class="divCad">
+                <a href="form/formP.html">Psicólogos Profissionais</a>
+                <a href="form/formV.html">Psicólogos Volúntarios</a>
+                <a href="form/formJOGO.html">Jogo</a>
+            </div>
+            <a class="a3 d1" href="card.html">Profissionais</a>
+            <a class="a4 d1" href="voce.html">Parceiros</a>
+            <a class="a5 d1" href="quem somos">Quem somos</a>
+            <a class="a6 d1" href="contato">Contato</a>
+        </nav>
+    </header>
     <!-- Primeira Linha-->
+    <section class="parallax">
+        <div class="rotate">
 
-    <div class="titulo">
-        <h2> Psicólogos Formados</h2>
-    </div>
-    <div class="corpo">
-        <div class="conteudo">
+        </div>
+        <div>
 
-            <div class="cartao">
-
-                <div class="frente"> Frente </div>
-                <div class="traseira"><img src="img/Cute.jpg" /></div>
-
+        </div>
+    </section>
+    <section class="texto">
+        <h1 class="contatos"> Profissionais que ajudarão suas crianças.</h1>
+        <p>O psicólogo infantil trabalha basicamente a partir do lúdico.</p>
+        <p> Assim, a criança vai às sessões e brinca, com o terapeuta ou sozinha e, enquanto isso, suas questões são abordadas
+            de forma indireta.</p>
+        <p> Dessa forma, os conteúdos são mais facilmente acessados pelo psicólogo, pois a criança os expressa por meio do brincar.</p>
+        <div class="colab"></div>
+    </section>
+    <section class='quadradinhos'>
+        <div class="parallax2">
+            <div class="titulo">
+                <h2> Psicólogos Formados</h2>
 
             </div>
+            <div class="corpo">
+                <div class="conteudo">
 
-        </div>
+                    <div class="cartao">
 
-        <div class="conteudo">
-
-            <div class="cartao">
-
-                <div class="frente"><p>Frente</p></div>
-                <div class="traseira"><p>Traseira</p></div>
+                        <div class="frente rosa">
+                            <img src="img/doutora.png" />Frente </div>
+                        <div class="traseira azul"></div>
 
 
+                    </div>
+
+                </div>
+
+                <div class="conteudo">
+
+                    <div class="cartao">
+
+                        <div class="frente azul">
+                            <p>Frente</p>
+                        </div>
+                        <div class="traseira rosa">
+                            <p>Traseira</p>
+                        </div>
+
+
+                    </div>
+
+                </div>
+
+                <div class="conteudo">
+
+                    <div class="cartao">
+
+                        <div class="frente rosa">
+                            <p>Frente</p>
+                        </div>
+                        <div class="traseira azul">
+                            <p>Traseira</p>
+                        </div>
+
+
+                    </div>
+
+                </div>
+
+                <div class="conteudo">
+
+                    <div class="cartao">
+
+                        <div class="frente azul">
+                            <p>Frente</p>
+                        </div>
+                        <div class="traseira rosa">
+                            <p>Traseira</p>
+                        </div>
+
+
+                    </div>
+
+                </div>
             </div>
 
-        </div>
 
-        <div class="conteudo">
+            <!-- Segunda Linha-->
 
-            <div class="cartao">
+            <div class="corpo">
+                <div class="conteudo">
 
-                <div class="frente"><p>Frente</p></div>
-                <div class="traseira"><p>Traseira</p></div>
+                    <div class="cartao">
 
+                        <div class="frente azul"> Frente </div>
+                        <div class="traseira rosa">
+                            <img src="img/Cute.jpg" />
+                        </div>
 
-            </div>
 
-        </div>
+                    </div>
 
-        <div class="conteudo">
+                </div>
 
-            <div class="cartao">
+                <div class="conteudo">
 
-                <div class="frente"><p>Frente</p></div>
-                <div class="traseira"><p>Traseira</p></div>
+                    <div class="cartao">
 
+                        <div class="frente rosa">
+                            <p>Frente</p>
+                        </div>
+                        <div class="traseira azul">
+                            <p>Traseira</p>
+                        </div>
 
-            </div>
 
-        </div>
-    </div>
+                    </div>
 
-    <!-- Segunda Linha-->
+                </div>
 
-    <div class="corpo">
-        <div class="conteudo">
+                <div class="conteudo">
 
-            <div class="cartao">
+                    <div class="cartao">
 
-                <div class="frente"><p>Frente</p></div>
-                <div class="traseira"><p>Traseira</p></div>
+                        <div class="frente azul">
+                            <p>Frente</p>
+                        </div>
+                        <div class="traseira rosa">
+                            <p>Traseira</p>
+                        </div>
 
 
-            </div>
+                    </div>
 
-        </div>
+                </div>
 
+                <div class="conteudo">
 
-        <div class="conteudo">
+                    <div class="cartao">
 
-            <div class="cartao">
+                        <div class="frente rosa">
+                            <p>Frente</p>
+                        </div>
+                        <div class="traseira azul">
+                            <p>Traseira</p>
+                        </div>
 
-                <div class="frente"><p>Frente</p></div>
-                <div class="traseira"><p>Traseira</p></div>
 
+                    </div>
 
-            </div>
 
-        </div>
-
-
-        <div class="conteudo">
-
-            <div class="cartao">
-
-                <div class="frente"><img src="img/Cute2.jpg" /></div>
-                <div class="traseira"><p>Traseira</p></div>
-
-
-            </div>
-
-        </div>
-
-    </div>
-
-
-
-    <div class="titulo">
-        <h2> Psicólogos Voluntários</h2>
-    </div>
-
-
-
-
-    <!-- Terceira Linha -->
-
-
-    <div class="corpo">
-        <div class="conteudo">
-
-            <div class="cartao">
-
-                <div class="frente"><p>Frente</p></div>
-                <div class="traseira"><p>Traseira</p></div>
-
-
-            </div>
-
-        </div>
-
-        <div class="conteudo">
-
-            <div class="cartao">
-
-                <div class="frente"><p>Frente</p></div>
-                <div class="traseira"><p>Traseira</p></div>
-
-
-            </div>
-
-        </div>
-
-        <div class="conteudo">
-
-            <div class="cartao">
-
-                <div class="frente"><p>Frente</p></div>
-                <div class="traseira"><p>Traseira</p></div>
-
-
-            </div>
-
-        </div>
-
-        <div class="conteudo">
-
-            <div class="cartao">
-
-                <div class="frente"><p>Frente</p></div>
-                <div class="traseira"><p>Traseira</p></div>
-
-
+                </div>
             </div>
         </div>
+        <section class="texto">
+            <h1 class="contatos"> Profissionais que ajudarão suas crianças.</h1>
+            <p>O psicólogo infantil trabalha basicamente a partir do lúdico.</p>
+            <p> Assim, a criança vai às sessões e brinca, com o terapeuta ou sozinha e, enquanto isso, suas questões são abordadas
+                de forma indireta.</p>
+            <p> Dessa forma, os conteúdos são mais facilmente acessados pelo psicólogo, pois a criança os expressa por meio do
+                brincar.
+            </p>
+            <div class="colab"></div>
+        </section>
+        <div class="parallax3">
+            <div class="titulo">
 
-    </div>
-    <!-- Quarta Linha -->
+                <h2> Psicólogos Voluntários</h2>
+            </div>
+            <div class="corpo">
+                <div class="conteudo">
+
+                    <div class="cartao">
+
+                        <div class="frente rosa">
+                            <img src="img/doutora.png" />Frente </div>
+                        <div class="traseira azul"></div>
 
 
-    <div class="corpo">
-        <div class="conteudo">
+                    </div>
 
-            <div class="cartao">
+                </div>
 
-                <div class="frente"><p>Frente</p></div>
-                <div class="traseira"><p>Traseira</p></div>
+                <div class="conteudo">
+
+                    <div class="cartao">
+
+                        <div class="frente azul">
+                            <p>Frente</p>
+                        </div>
+                        <div class="traseira rosa">
+                            <p>Traseira</p>
+                        </div>
 
 
+                    </div>
+
+                </div>
+
+                <div class="conteudo">
+
+                    <div class="cartao">
+
+                        <div class="frente rosa">
+                            <p>Frente</p>
+                        </div>
+                        <div class="traseira azul">
+                            <p>Traseira</p>
+                        </div>
+
+
+                    </div>
+
+                </div>
+
+                <div class="conteudo">
+
+                    <div class="cartao">
+
+                        <div class="frente azul">
+                            <p>Frente</p>
+                        </div>
+                        <div class="traseira rosa">
+                            <p>Traseira</p>
+                        </div>
+
+
+                    </div>
+
+                </div>
             </div>
 
-        </div>
 
-        <div class="conteudo">
+            <!-- Segunda Linha-->
 
-            <div class="cartao">
+            <div class="corpo">
+                <div class="conteudo">
 
-                <div class="frente"><p>Frente</p></div>
-                <div class="traseira"><p>Traseira</p></div>
+                    <div class="cartao">
+
+                        <div class="frente azul"> Frente </div>
+                        <div class="traseira rosa">
+                            <img src="img/Cute.jpg" />
+                        </div>
 
 
+                    </div>
+
+                </div>
+
+                <div class="conteudo">
+
+                    <div class="cartao">
+
+                        <div class="frente rosa">
+                            <p>Frente</p>
+                        </div>
+                        <div class="traseira azul">
+                            <p>Traseira</p>
+                        </div>
+
+
+                    </div>
+
+                </div>
+
+                <div class="conteudo">
+
+                    <div class="cartao">
+
+                        <div class="frente azul">
+                            <p>Frente</p>
+                        </div>
+                        <div class="traseira rosa">
+                            <p>Traseira</p>
+                        </div>
+
+
+                    </div>
+
+                </div>
+
+                <div class="conteudo">
+
+                    <div class="cartao">
+
+                        <div class="frente rosa">
+                            <p>Frente</p>
+                        </div>
+                        <div class="traseira azul">
+                            <p>Traseira</p>
+                        </div>
+
+
+                    </div>
+
+                </div>
             </div>
-
         </div>
-
-        <div class="conteudo">
-
-            <div class="cartao">
-
-                <div class="frente"><p>Frente</p></div>
-                <div class="traseira"><p>Traseira</p></div>
-
-
-            </div>
-
+    </section>
+    <footer>
+        <div>
+            <img src="img/icones/face.png" alt="Icone Facebook">
+            <img src="img/icones/insta.png" alt="Icone Instagram">
+            <img src="img/icones/tw.png" alt="Icone Twitter">
         </div>
-
-        <div class="conteudo">
-
-            <div class="cartao">
-
-                <div class="frente"><p>Frente</p></div>
-                <div class="traseira"><p>Traseira</p></div>
-
-
-            </div>
-        </div>
-
-        </div>
-
-
-
+    </footer>
 </body>
+
 </html>

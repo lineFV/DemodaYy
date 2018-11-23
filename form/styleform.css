@@ -1,0 +1,64 @@
+body{
+    background: url('imgj/fundo2.jpg');
+    background-size: cover;
+    font-family: 'Comic Sans MS', sans-serif;
+    background-repeat: no-repeat;
+    background-position: center;
+    margin:0; 
+    padding:0;
+  }
+  #form{
+      display: flex;
+  }
+  .textos{
+    width: 50%;
+    margin: 30px;
+    font-family: 'Philosopher', sans-serif;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+  }
+  .parallax {
+    background-image: url("img/psico5.jpg");
+    background-attachment: fixed;
+    background-position: center top;
+    background-size: cover;
+    background-repeat: no-repeat;
+    height: 65vh;
+    position: relative;
+    top: 0;
+    z-index: 1;
+    overflow: hidden;
+}
+  
+  .textos h1{
+    font-family: 'Philosopher', sans-serif;
+    font-size: 32px;
+  }
+  
+  .textos p{
+    font-size: 22px
+  }
+  
+  .cadastro{
+    display: flex;
+    align-items: center;
+    background-color: #a5d0f0;
+    justify-content: flex-end;
+    width: 50%;
+    margin: 0 auto;
+  }
+  
+  form{
+    font-family: 'Philosopher', sans-serif;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    width: 100%;
+  }
+  
+  form h2{
+    font-size: 28px;
+  }
+  
